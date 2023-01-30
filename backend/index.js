@@ -1,7 +1,7 @@
-
 const express=require("express")
 const cors = require("cors");
 const { connection } = require("./config/db");
+const { userRouter } = require("./routes/user.routes");
 
 require("dotenv").config()
 
@@ -16,7 +16,7 @@ app.get("/",(req,res)=>{
 })
 
 
-
+app.use("/", userRouter)
 
 
 
