@@ -1,12 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+
+
+
 
 function App() {
   return (
-    <div className="App">
-        PRD Project
-    </div>
-  );
+    
+      <h1>PRD Project</h1>
+  )
+  
 }
 
 export default App;
