@@ -27,9 +27,11 @@ import {
 import {FaShoppingCart,FaHouseUser} from "react-icons/fa"
 import { RiAccountCircleFill} from "react-icons/ri"
 import {FcAbout} from  "react-icons/fc"
+import {BsMenuButtonWideFill} from "react-icons/bs"
 
 import { useNavigate } from "react-router-dom";
 import ProjectLogo from "../asset/projectlogo.png"
+import Menu from "./Menu";
 
 
 const Navbar = () => {
@@ -45,31 +47,31 @@ const Navbar = () => {
         justify="space-between"
         wrap="wrap"
         padding="1.2rem"
-        
+        bg="brand.600"
         boxShadow="md"
         pos="fixed"
         top="0"
         left="0"
         right="0"
-        zIndex={25}
+        zIndex={2}
       >
-        <Flex align="center" ml="15px">
+        <VStack align="center" ml={["none","none","70px"]}>
           {/* <Image src={ProjectLogo} alt="logo" /> */}
-          <Text fontWeight="bold" fontSize="xl" ml={2}>
-            METAVERS Digital
+          <Text p="0 10px" fontWeight="bold" fontSize="25px" ml={2} color="gray.400" fontFamily={"sans-serif"} border="1px solid #E2E8F0" borderStyle={"dotted"}>
+            META Digital
           </Text>
-        </Flex>
+        </VStack>
 
         <Box display={{ base: "block", md: "none" }} onClick={onOpen}>
           <IconButton
             size="sm"
             aria-label="Menu"
             icon="menu"
-           
+           bg="brand.800"
           />
         </Box>
 
-        <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
+        <Drawer isOpen={isOpen} placement="right" onClose={onClose} bg="brand.700" >
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
@@ -78,27 +80,65 @@ const Navbar = () => {
             <DrawerBody>
             <VStack>
             <Input placeholder="Search" border={"1px solid gray"}/>
-            <Link href="#">Home</Link>
-            <Link href="#">About</Link>
+            <Link href="#"><FaHouseUser size = '28px' color="#4A5568"/></Link>
+            <Link href="#"><FcAbout size = '28px' color="#4A5568"/></Link>
             <Link href="#">Login</Link>
             <Link href="#">Sign up</Link>
-            <Link href="#"><FaShoppingCart/></Link>
+            <Link href="#"><FaShoppingCart size = '28px' color="#4A5568"/></Link>
             </VStack>
             
             </DrawerBody>
           </DrawerContent>
         </Drawer>
+  
 
-        <Flex display={{ base: "none", md: "flex" }} fontSize="1.1rem" gap={15} border="0px solid red" w="70rem">
-            <Input placeholder="Search" border={"1px solid gray"} />
-            <HStack   border="0px solid red" w="20%" >
-            <Link href="#"  border="0px solid red" w="20%" mr="-2%"><FaHouseUser/></Link>
-            <Text >Home</Text>
+        <Flex display={{ base: "none", md: "flex" }} fontSize="1.1rem" gap={10} border="0px solid red" w={"70rem"} justifyContent={"space-between"} >
+           
+    <Box>
+      <HStack gap={"50px"}>
+      <Box>
+        <Popover >
+          
+            <PopoverTrigger trigger="hover">
+              <Box style={{cursor:"pointer"}} display="flex" width="2rem">
+              <HStack border="0px solid red" w="full" >
+            <Box border="0px solid red" w="full" mr="10%"><BsMenuButtonWideFill  size = '28px' color="#E2E8F0" />
+            {/* <Text as='b' fontFamily={"cursive"}  >MENU</Text> */}
+            </Box>
+            </HStack>
+              </Box>
+            
+            </PopoverTrigger>
+            
+            <PopoverContent >
+            <PopoverBody>
+              <Box>
+              <Menu/>
+              </Box>
+             
+            </PopoverBody> 
+            </PopoverContent>
+        
+        </Popover>
+      </Box>
+            <HStack >
+            <Input placeholder="Search...." border={"1px solid #065666"} width="25rem" />
+            </HStack>
+      </HStack>
+  
+    </Box>
+
+
+    <Box>
+      <HStack>
+      <HStack   border="0px solid red">
+            <Link href="#"  border="0px solid red" w="20%" mr="10%"><FaHouseUser size = '29px' color="#E2E8F0" /></Link>
+            <Text  fontFamily={"cursive"}  color="gray.400" >Home</Text>
             </HStack>
           
-            <HStack   border="0px solid red" w="20%" >
-            <Link href="#"  border="0px solid red" w="20%" mr="-2%"><FcAbout/></Link>
-            <Text >About</Text>
+            <HStack   border="0px solid red" >
+            <Link href="#"  border="0px solid red" w="20%" mr="15%"><FcAbout size = '40px' color="#E2E8F0"/></Link>
+            <Text  fontFamily={"cursive"} color="gray.400">About</Text>
             </HStack>
 
             {/* MY Account */}
@@ -109,8 +149,8 @@ const Navbar = () => {
           
    
           <HStack   border="0px solid red" w="full" >
-            <Link href="#"  border="0px solid red"  mr="2%"><RiAccountCircleFill/></Link>
-            <Text as='b'fontSize='15px' w="5rem" >My Account</Text>
+            <Link href="#"  border="0px solid red"  mr="2%"><RiAccountCircleFill size = '35px'color="#E2E8F0" /></Link>
+            <Text  fontFamily={"cursive"} w="5rem" color="gray.400">Account</Text>
             </HStack>
           </Box>
         </PopoverTrigger>
@@ -141,11 +181,20 @@ const Navbar = () => {
         </PopoverContent>
       </Popover>
 
-            
+            <Box style={{ position: 'relative' }}>
             <HStack   border="0px solid red">
-            <Link href="#"><FaShoppingCart/></Link>
-            <Text as='b'fontSize='15px' w="5rem">Cart</Text>
+            <Link href="#"><FaShoppingCart size = '30px' color="#E2E8F0"/></Link>
+            <Text  fontFamily={"cursive"} w="5rem" color="gray.400">Cart</Text>
             </HStack>
+            </Box>
+          
+
+      </HStack>
+   
+    </Box>
+
+            
+           
             
         </Flex>
 

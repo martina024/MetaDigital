@@ -5,6 +5,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router';
 import Slider from "react-slick";
 import MyCarousel from '../Component/MyCarousel';
+import Navbar from '../Component/Navbar';
+import Footer from "../Component/Footer"
 
 
 
@@ -63,306 +65,11 @@ useEffect(()=>{
   return (
     <>
       
-   {/* <Navbar/> */}
-    <Box bg="gray.100" pb="100px" zIndex={999} pt="90px" display={"flex"} >
-    {!isVisible && (
-      <Box bg="white" display={["none","none","flex"]} py="40px" position={"fixed"} w="20%" >
-      <UnorderedList listStyleType="none"  spacing={5} >
-        
-      <Box>
-        <Popover trigger="hover">
-          {({ isOpen, onClose }) => (
-          <>
-            <PopoverTrigger>
-               <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} >Earphone</Box>
-            </PopoverTrigger>
-            
-            <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">
-            <PopoverBody>
-               <UnorderedList listStyleType="none"  spacing={1.5} textAlign="left">
-                      <ListItem color="#e9611e">Shop by Brand</ListItem>
-                      <ListItem >BOAT</ListItem>
-                      <ListItem >HAMMER</ListItem>
-                      <ListItem >pTRON</ListItem>
-                      <ListItem >REALME</ListItem>
-                      <ListItem >ONE PLUS</ListItem>
-                      <ListItem >NOTHING1</ListItem>
-                      
-                      <ListItem color="#e9611e" >Shop by Price</ListItem>
-                      <ListItem >Below 288</ListItem>
-                      <ListItem >288 - 576</ListItem>
-                      <ListItem >576 - 1152</ListItem>
-                      <ListItem >1152 - 2304</ListItem>
-                      <ListItem >Above 2304</ListItem>
-                    </UnorderedList>
-                
-             
-              
-            </PopoverBody>
-            </PopoverContent>
-          </>
-          )}
-        </Popover>
-      </Box>
+   <Navbar/>
+    <Box bg="gray.100" pb="100px" zIndex={999} pt="90px" display={"flex"} fontFamily="cursive" >
+   
 
-      <Box>
-        <Popover trigger="hover">
-          {({ isOpen, onClose }) => (
-          <>
-            <PopoverTrigger>
-               <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} >Speaker</Box>
-            </PopoverTrigger>
-            
-            <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">
-            <PopoverBody>
-               <UnorderedList listStyleType="none"  spacing={1.5} textAlign="left">
-                      <ListItem color="#e9611e">Shop by Brand</ListItem>
-                      <ListItem >BOAT</ListItem>
-                     
-                      <ListItem color="#e9611e" >Shop by Price</ListItem>
-                      <ListItem >Below 288</ListItem>
-                      <ListItem >288 - 576</ListItem>
-                      <ListItem >576 - 1152</ListItem>
-                      <ListItem >1152 - 2304</ListItem>
-                      <ListItem >Above 2304</ListItem>
-                    </UnorderedList>
-                
-             
-              
-            </PopoverBody>
-            </PopoverContent>
-          </>
-          )}
-        </Popover>
-      </Box>
-
-
-
-      <Box>
-        <Popover trigger="hover">
-          {({ isOpen, onClose }) => (
-          <>
-            <PopoverTrigger>
-               <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} >Telivision</Box>
-            </PopoverTrigger>
-            
-            <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">
-            <PopoverBody>
-               <UnorderedList listStyleType="none"  spacing={1.5} textAlign="left">
-                      <ListItem color="#e9611e">Shop by Brand</ListItem>
-                      <ListItem >HISENSE</ListItem>
-                      <ListItem >IFFALCON</ListItem>
-                      <ListItem >ITEL</ListItem>
-                      <ListItem >TCL</ListItem>
-                      <ListItem >ONEPLUS</ListItem>
-                      <ListItem >KODAK</ListItem>
-                      
-                      <ListItem color="#e9611e" >Shop by Price</ListItem>
-                      <ListItem >Below 288</ListItem>
-                      <ListItem >288 - 576</ListItem>
-                      <ListItem >576 - 1152</ListItem>
-                      <ListItem >1152 - 2304</ListItem>
-                      <ListItem >Above 2304</ListItem>
-                    </UnorderedList>
-                
-             
-              
-            </PopoverBody>
-            </PopoverContent>
-          </>
-          )}
-        </Popover>
-      </Box>
-
-
-
-
-      <Box>
-        <Popover trigger="hover">
-          {({ isOpen, onClose }) => (
-          <>
-            <PopoverTrigger>
-               <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} >Monitor</Box>
-            </PopoverTrigger>
-            
-            <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">
-            <PopoverBody>
-               <UnorderedList listStyleType="none"  spacing={1.5} textAlign="left">
-                      <ListItem color="#e9611e">Shop by Brand</ListItem>
-                      <ListItem >ZEBRONICS</ListItem>
-                      <ListItem >ENTER</ListItem>
-                      <ListItem >ACER</ListItem>
-                      
-                      <ListItem color="#e9611e" >Shop by Price</ListItem>
-                      <ListItem >Below 288</ListItem>
-                      <ListItem >288 - 576</ListItem>
-                      <ListItem >576 - 1152</ListItem>
-                      <ListItem >1152 - 2304</ListItem>
-                      <ListItem >Above 2304</ListItem>
-                    </UnorderedList>
-                
-             
-              
-            </PopoverBody>
-            </PopoverContent>
-          </>
-          )}
-        </Popover>
-      </Box>
-
-
-
-
-
-      <Box>
-        <Popover trigger="hover">
-          {({ isOpen, onClose }) => (
-          <>
-            <PopoverTrigger>
-               <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} >Mobile</Box>
-            </PopoverTrigger>
-            
-            <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">
-            <PopoverBody>
-               <UnorderedList listStyleType="none"  spacing={1.5} textAlign="left">
-                      <ListItem color="#e9611e">Shop by Brand</ListItem>
-                      <ListItem >APPLE</ListItem>
-                     
-                      <ListItem color="#e9611e" >Shop by Price</ListItem>
-                      <ListItem >Below 288</ListItem>
-                      <ListItem >288 - 576</ListItem>
-                      <ListItem >576 - 1152</ListItem>
-                      <ListItem >1152 - 2304</ListItem>
-                      <ListItem >Above 2304</ListItem>
-                    </UnorderedList>
-                
-             
-              
-            </PopoverBody>
-            </PopoverContent>
-          </>
-          )}
-        </Popover>
-      </Box>
-
-
-
-
-
-      <Box>
-        <Popover trigger="hover">
-          {({ isOpen, onClose }) => (
-          <>
-            <PopoverTrigger>
-               <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} >Kitchen</Box>
-            </PopoverTrigger>
-            
-            <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">
-            <PopoverBody>
-               <UnorderedList listStyleType="none"  spacing={1.5} textAlign="left">
-                      <ListItem color="#e9611e">Shop by Brand</ListItem>
-                      <ListItem >BAJAJ</ListItem>
-                      <ListItem >PHILLIPS</ListItem>
-                     
-                      <ListItem color="#e9611e" >Shop by Price</ListItem>
-                      <ListItem >Below 288</ListItem>
-                      <ListItem >288 - 576</ListItem>
-                      <ListItem >576 - 1152</ListItem>
-                      <ListItem >1152 - 2304</ListItem>
-                      <ListItem >Above 2304</ListItem>
-                    </UnorderedList>
-                
-             
-              
-            </PopoverBody>
-            </PopoverContent>
-          </>
-          )}
-        </Popover>
-      </Box>
-
-
-
-
-      <Box>
-        <Popover trigger="hover">
-          {({ isOpen, onClose }) => (
-          <>
-            <PopoverTrigger>
-               <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} >Dailyuse</Box>
-            </PopoverTrigger>
-            
-            <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">
-            <PopoverBody>
-               <UnorderedList listStyleType="none"  spacing={1.5} textAlign="left">
-                      <ListItem color="#e9611e">Shop by Brand</ListItem>
-                      <ListItem >PHILLIPS</ListItem>
-                      <ListItem >NOVA</ListItem>
-                      
-                    
-                      <ListItem color="#e9611e" >Shop by Price</ListItem>
-                      <ListItem >Below 288</ListItem>
-                      <ListItem >288 - 576</ListItem>
-                      <ListItem >576 - 1152</ListItem>
-                      <ListItem >1152 - 2304</ListItem>
-                      <ListItem >Above 2304</ListItem>
-                    </UnorderedList>
-                
-             
-              
-            </PopoverBody>
-            </PopoverContent>
-          </>
-          )}
-        </Popover>
-      </Box>
-
-
-
-
-      <Box>
-        <Popover trigger="hover">
-          {({ isOpen, onClose }) => (
-          <>
-            <PopoverTrigger>
-               <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} >Watch</Box>
-            </PopoverTrigger>
-            
-            <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">
-            <PopoverBody>
-               <UnorderedList listStyleType="none"  spacing={1.5} textAlign="left">
-                      <ListItem color="#e9611e">Shop by Brand</ListItem>
-                      <ListItem >pTRON</ListItem>
-                      <ListItem >BOAT</ListItem>
-                      <ListItem >HAMMER</ListItem>
-                      <ListItem >NOISE</ListItem>
-                    
-                      <ListItem color="#e9611e" >Shop by Price</ListItem>
-                      <ListItem >Below 288</ListItem>
-                      <ListItem >288 - 576</ListItem>
-                      <ListItem >576 - 1152</ListItem>
-                      <ListItem >1152 - 2304</ListItem>
-                      <ListItem >Above 2304</ListItem>
-                    </UnorderedList>
-                
-             
-              
-            </PopoverBody>
-            </PopoverContent>
-          </>
-          )}
-        </Popover>
-      </Box>
-
-  
-      </UnorderedList>
-      </Box>
-      )}
-
-
-
-
-      <Box w={["100%","100%","80%"]} ml={["5%","7%","20.5%"]} >
+      <Box w={["100%","100%","100%"]} ml={["5%","7%","5%"]} >
       <Image w={["95%"]} mt="30px" src="https://www.reliancedigital.in/medias/7.5-Instant-Discount-Citibank-Weekend-Offer-Carousel-Banner-02-02-2023.jpg?context=bWFzdGVyfGltYWdlc3w4NDk3MXxpbWFnZS9qcGVnfGltYWdlcy9oNWMvaGE1Lzk5NTY3NTYzMjQzODIuanBnfGM0MThhNjkyMjQxYjY4NGMzYjBkMmZiZDI1MDkzMjU1M2FjM2I4MTEwZTY3MzQ3M2NkNzQxZmEwMjI2MTI5NzE"/>
       {/* TELEVISION */}
       <Box mt="40px"  >
@@ -377,7 +84,7 @@ useEffect(()=>{
       TELEVISION
       </Text>
       <Box  w="95%" display={"flex"} >
-      <SimpleGrid w={["100%","100%","80%"]} columns={[2, 3, 4]} spacing='1px'>
+      <SimpleGrid w={["100%","100%","80%"]} columns={[2, 3, 4]} spacing='8px'>
       {products.filter(ele=>ele.category==="Telivision").slice(0, 8).map(item=>(
         
         <Box 
@@ -420,7 +127,7 @@ useEffect(()=>{
      
       </Text>
       <Box w="95%"  display={"flex"} >
-      <SimpleGrid w={["100%","100%","80%"]} columns={[2, 3, 4]} spacing='1px'>
+      <SimpleGrid w={["100%","100%","80%"]} columns={[2, 3, 4]} spacing='8px'>
       {products.filter(ele=>ele.category==="Earphone").slice(0, 8).map(item=>(
         
         <Box 
@@ -455,7 +162,7 @@ useEffect(()=>{
       </Box>
       </Box>
 
-      <Box mt="60px" >
+      <Box mt="60px" boxSizing='border-box' >
         <MyCarousel images={images_two}/>
         </Box>
 
@@ -467,7 +174,7 @@ useEffect(()=>{
       MOBILE
       </Text>
       <Box w="95%"  display={"flex"} >
-      <SimpleGrid w={["100%","100%","80%"]} columns={[2, 3, 4]} spacing='1px'>
+      <SimpleGrid w={["100%","100%","80%"]} columns={[2, 3, 4]} spacing='8px'>
       {products.filter(ele=>ele.category==="Mobile").slice(0, 8).map(item=>(
         
         <Box 
@@ -512,7 +219,7 @@ useEffect(()=>{
        MONITOR
       </Text>
       <Box w="95%"  display={"flex"} >
-      <SimpleGrid w={["100%","100%","80%"]} columns={[2, 3, 4]} spacing='1px'>
+      <SimpleGrid w={["100%","100%","80%"]} columns={[2, 3, 4]} spacing='8px'>
       {products.filter(ele=>ele.category==="Monitor").slice(0, 8).map(item=>(
         
         <Box 
@@ -559,7 +266,7 @@ useEffect(()=>{
       WATCH
       </Text>
       <Box w="95%"  display={"flex"} >
-      <SimpleGrid w={["100%","100%","80%"]} columns={[2, 3, 4]} spacing='1px'>
+      <SimpleGrid w={["100%","100%","80%"]} columns={[2, 3, 4]} spacing='8px'>
       {products.filter(ele=>ele.category==="Watch").slice(0, 8).map(item=>(
         
         <Box 
@@ -604,7 +311,8 @@ useEffect(()=>{
 
 
     </Box>
-    {/* <Footer/> */}
+
+    <Footer/>
     </>
   )
 }
