@@ -1,10 +1,52 @@
-import React from 'react'
-import {Text, Heading,  VStack,  Button, HStack, AspectRatio, Stack, Image, Divider, useColorMode, useColorModeValue } from '@chakra-ui/react'
+
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import {Text, Heading,  VStack,  Button, HStack, AspectRatio, Stack, Image, Divider, useColorMode, useColorModeValue, useToast, Box } from '@chakra-ui/react'
+import { SingleCartItem } from "./SingleCartItem";
 const YourCart = () => {
+    
+    const [Cart_Data, set_Cart_Data] = useState([]);
+    const [total, settotal] = useState(0);
+    const [error, setError] = useState("");
+    
+
     const {toggleColorMode} = useColorMode()
     const bgColor=useColorModeValue("gray.50" , "whiteAlpha.50")
     const bgText=useColorModeValue("gray.600" , "whiteAlpha.600")
+
+
+    const fetchData = async () => {
+        // console.log("data")
+        let res = await axios
+          .get(`https://red-helpful-seagull.cyclic.app/products/cart`)
+          .then((res) => {
+            set_Cart_Data(res.data);
+            console.log(res);
+          });
+      };
+      useEffect(() => {
+        fetchData();
+      }, []);
+    
+      const handleTotal = () => {
+        let Total = 0;
+        Cart_Data.map((ele) => {
+         
+          let singleprice = ele.price;
+          Total += Math.floor(singleprice * ele.quantity);
+        });
+        settotal(Total);
+      };
+      useEffect(() => {
+        handleTotal();
+      }, [Cart_Data]);
+
+
+     
+
+
   return (
+   
     <VStack bg={bgColor} w={"full"} h="full" p={10} spacing={10} align="flex-start">
         <VStack alignItems={"flex-start"} spacing={3}>
             <Heading size={"2xl"}>Your Cart</Heading>
@@ -15,33 +57,68 @@ const YourCart = () => {
             </Text>
             
         </VStack>
-        <HStack spacing={6} alignItems="center" w="full">
-            <AspectRatio ratio={1} w={24}>
-                <Image src="" alt=""/>
-            </AspectRatio>
-            <Stack spacing={0} w="full" direction="row" alignItems="center" justifyContent={"space-between"}>
-                <VStack w="full" spacing={0} alignItems="flex-start">
-                    <Heading size={"md"}>Product name</Heading>
-                    <Text color={bgText}>Product Id</Text>
+        
+        
+      
+        <Box>
+        {Cart_Data.map((item, index) => (
+          <div key={item.id}>
+            <SingleCartItem
+              key={item._id}
+              item={item}
+            
+             
+            />
+            <Divider />
+          </div>
+        ))}
+      </Box>
+     
+             
+             
+              <Text
+                pl="20px"
+                fontSize={"13px"}
+                color="#de2511"
+                py="3px"
+                textAlign={"left"}
+              >
+                {error}
+              </Text>
+              {!error ? (
+                <VStack>
+                  <Box
+                    display={"flex"}
+                    h="30px"
+                    justifyContent="space-between"
+                    w="90%"
+                    margin="auto"
+                    py="20px"
+                  >
+                    <Text>Subtotal:Rs.</Text>
+                    <Text>{total.toLocaleString()}</Text>
+                  </Box>
+                 
+                  <Box
+                    fontWeight={"bold"}
+                    display={"flex"}
+                    h="30px"
+                    justifyContent="space-between"
+                    w="90%"
+                    margin="auto"
+                    py="20px"
+                    fontSize={"20px"}
+                  >
+                    <Text>Total Price</Text>
+                    <Text color="#e45301">{total.toLocaleString()}</Text>
+                  </Box>
+                  
                 </VStack>
-                <Heading size={"sm"} textAlign="end">Price</Heading>
-            </Stack>
-        </HStack>
-        <VStack spacing={4} alignItems="stretch" w="full">
-            <HStack justifyContent={"space-between"}>
-                <Text color={bgText}>Subtotal</Text>
-                <Heading size="sm">Rs.200</Heading>
-            </HStack>
-            <HStack justifyContent={"space-between"}>
-                <Text color={bgText}>Taxes (estimated)</Text>
-                <Heading size="sm">Rs.28.5</Heading>
-            </HStack>
-        </VStack>
-        <Divider/>
-        <HStack justifyContent={"space-between"} w="full">
-                <Text color={bgText}>TOTAL</Text>
-                <Heading size="lg">Rs.228.5</Heading>
-            </HStack>
+              ) : null}
+       
+     
+        
+               
       </VStack>
   )
 }

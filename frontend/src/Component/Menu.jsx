@@ -33,7 +33,9 @@ const Menu = () => {
           {({ isOpen, onClose }) => (
           <>
             <PopoverTrigger>
+            <Link to="/allproducts">
                <Box w="100%" style={{ cursor: 'pointer'}} _hover={{color:"white" , backgroundColor:"gray.600" }} fontFamily="heading" fontSize={"larger"} >Earphone</Box>
+               </Link>
             </PopoverTrigger>
             
             <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.500" color="white"  borderRadius="0px">
@@ -69,8 +71,10 @@ const Menu = () => {
           {({ isOpen, onClose }) => (
           <>
             <PopoverTrigger>
+            <Link to="/allproducts">
                <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} fontFamily="heading" fontSize={"larger"}>Speaker</Box>
-            </PopoverTrigger>
+               </Link>
+           </PopoverTrigger>
             
             <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">
             <PopoverBody>
@@ -102,7 +106,9 @@ const Menu = () => {
           {({ isOpen, onClose }) => (
           <>
             <PopoverTrigger>
+            <Link to="/allproducts">
                <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} fontFamily="heading" fontSize={"larger"}>Telivision</Box>
+               </Link>
             </PopoverTrigger>
             
             <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">
@@ -141,8 +147,10 @@ const Menu = () => {
           {({ isOpen, onClose }) => (
           <>
             <PopoverTrigger>
+            <Link to="/allproducts">
                <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} fontFamily="heading" fontSize={"larger"}>Monitor</Box>
-            </PopoverTrigger>
+               </Link>
+           </PopoverTrigger>
             
             <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">
             <PopoverBody>
@@ -178,7 +186,9 @@ const Menu = () => {
           {({ isOpen, onClose }) => (
           <>
             <PopoverTrigger>
+            <Link to="/allproducts">
                <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} fontFamily="heading" fontSize={"larger"}>Mobile</Box>
+               </Link>
             </PopoverTrigger>
             
             <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">
@@ -213,8 +223,11 @@ const Menu = () => {
           {({ isOpen, onClose }) => (
           <>
             <PopoverTrigger>
+            <Link to="/allproducts">
                <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} fontFamily="heading" fontSize={"larger"}>Kitchen</Box>
+               </Link>
             </PopoverTrigger>
+
             
             <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">
             <PopoverBody>
@@ -248,8 +261,10 @@ const Menu = () => {
           {({ isOpen, onClose }) => (
           <>
             <PopoverTrigger>
+            <Link to="/allproducts">
                <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} fontFamily="heading" fontSize={"larger"}>Dailyuse</Box>
-            </PopoverTrigger>
+            
+               </Link></PopoverTrigger>
             
             <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">
             <PopoverBody>
@@ -284,7 +299,9 @@ const Menu = () => {
           {({ isOpen, onClose }) => (
           <>
             <PopoverTrigger>
+            <Link to="/allproducts">
                <Box w="100%" style={{ cursor: 'pointer' }} _hover={{color:"white" , backgroundColor:"gray.600" }} fontFamily="heading" fontSize={"larger"}>Watch</Box>
+               </Link>
             </PopoverTrigger>
             
             <PopoverContent ml="93.5%" mt="-10.2%" border="1px solid gray.600" bg="gray.600" color="white"  borderRadius="0px">

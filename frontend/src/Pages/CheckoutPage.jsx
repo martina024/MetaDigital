@@ -8,7 +8,7 @@ const CheckoutPage = () => {
     <Container maxWidth="container.xl" p="10">
         <Flex 
         // h={{base:"auto" , md:"100vh"}}
-        h={"500vh"}
+        h={"5vh"}
          py={[0, 10, 20]}
         direction={{
             base:"column-reverse",

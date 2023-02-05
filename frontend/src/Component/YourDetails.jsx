@@ -1,7 +1,22 @@
-import React from 'react'
-import {Text, FormControl, FormLabel, Heading, SimpleGrid, VStack, Input, Select, Textarea, Checkbox, Button, GridItem } from '@chakra-ui/react';
+import React, { useState } from 'react'
+import {Text, FormControl, FormLabel, Heading, SimpleGrid, VStack, Input, Select, Textarea, Checkbox, Button, GridItem, useToast } from '@chakra-ui/react';
 
 const YourDetails = () => {
+  const toast = useToast();
+  
+  const handleOrder = () => {
+        
+    toast({
+      title: "Order...",
+      description: "Order Placed Succesfully.",
+      position: "top",
+      status: "success",
+      duration: 2000,
+      isClosable: true,
+    });
+  
+  
+};
   return (
     <VStack w="full" h="full" p={10} spacing={10} alignItems="flex-start">
     <VStack spacing={2} alignItems="flex-start">
@@ -56,7 +71,7 @@ const YourDetails = () => {
         </FormControl>
       </GridItem>
       <GridItem colSpan={2}>
-        <Button varient="primary" w={"full"} size="lg">Place Item</Button>
+        <Button varient="primary" w={"full"} size="lg" onClick={handleOrder}>Place Item</Button>
       </GridItem>
     </SimpleGrid>
   

@@ -58,7 +58,7 @@ import {FcSearch} from "react-icons/fc"
   
         dispatch(getDataRequest());
     
-        return axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&sortby=price&order=${sortby}&search=${searching}`)
+        return axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&sortby=price&order=${sortby}&search=${searching}`)
         // return axios.get(`http://localhost:4500/products?page=${page}&limit=16&sortby=price&order=${sortby}&search=${search}`)
         // page=${page}&limit=16&sortby=price&order=${sortby}&search=${search}
           .then((res) => {
@@ -75,7 +75,7 @@ import {FcSearch} from "react-icons/fc"
     const getData = () => {
   
       dispatch(getDataRequest());
-       axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&sortby=price&order=${sortby}&search=${searching}`)
+       axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&sortby=price&order=${sortby}&search=${searching}`)
         .then((res) => {
           console.log(res.data);
           dispatch(getDataSuccess(res.data));
@@ -99,7 +99,7 @@ import {FcSearch} from "react-icons/fc"
     }
     console.log(payload)
   
-    axios.patch(`https://tan-determined-dove.cyclic.app/products/quantity/${id}`,payload,{
+    axios.patch(`https://red-helpful-seagull.cyclic.app/products/quantity/${id}`,payload,{
       headers: {
         Authorization: 'Bearer'+" "+token
       }
@@ -119,7 +119,7 @@ import {FcSearch} from "react-icons/fc"
   const handleBOAT = () => {
   
       dispatch(getDataRequest());
-       axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=BOAT`)
+       axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&search=BOAT`)
         .then((res) => {
           console.log(res.data);
           dispatch(getDataSuccess(res.data));
@@ -136,7 +136,7 @@ import {FcSearch} from "react-icons/fc"
   const handleHISENSE = () => {
   
       dispatch(getDataRequest());
-       axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=HISENSE`)
+       axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&search=HISENSE`)
         .then((res) => {
           console.log(res.data);
           dispatch(getDataSuccess(res.data));
@@ -152,7 +152,7 @@ import {FcSearch} from "react-icons/fc"
   const handleKODAK = () => {
   
       dispatch(getDataRequest());
-       axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=KODAK`)
+       axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&search=KODAK`)
         .then((res) => {
           console.log(res.data);
           dispatch(getDataSuccess(res.data));
@@ -167,7 +167,7 @@ import {FcSearch} from "react-icons/fc"
   const handleONEPLUS = () => {
   
       dispatch(getDataRequest());
-       axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=ONEPLUS`)
+       axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&search=ONEPLUS`)
         .then((res) => {
           console.log(res.data);
           dispatch(getDataSuccess(res.data));
@@ -182,7 +182,7 @@ import {FcSearch} from "react-icons/fc"
   const handleACER= () => {
   
       dispatch(getDataRequest());
-       axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=ACER`)
+       axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&search=ACER`)
         .then((res) => {
           console.log(res.data);
           dispatch(getDataSuccess(res.data));
@@ -197,7 +197,7 @@ import {FcSearch} from "react-icons/fc"
   const handleAPPLE = () => {
   
       dispatch(getDataRequest());
-       axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=${"APPLE"}`)
+       axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&search=${"APPLE"}`)
         .then((res) => {
           console.log(res.data);
           dispatch(getDataSuccess(res.data));
@@ -212,7 +212,7 @@ import {FcSearch} from "react-icons/fc"
   const handlePHILLIPS = () => {
   
       dispatch(getDataRequest());
-       axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=PHILLIPS`)
+       axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&search=PHILLIPS`)
         .then((res) => {
           console.log(res.data);
           dispatch(getDataSuccess(res.data));
@@ -228,7 +228,7 @@ import {FcSearch} from "react-icons/fc"
   const handleEarphone = () => {
   
     dispatch(getDataRequest());
-     axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=${"Earphone"}`)
+     axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&search=${"Earphone"}`)
       .then((res) => {
         console.log(res.data);
         dispatch(getDataSuccess(res.data));
@@ -243,7 +243,7 @@ import {FcSearch} from "react-icons/fc"
   const handleSpeaker = () => {
   
     dispatch(getDataRequest());
-     axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=${"Speaker"}`)
+     axios.get(`products?page=${page}&limit=16&search=${"Speaker"}`)
       .then((res) => {
         console.log(res.data);
         dispatch(getDataSuccess(res.data));
@@ -258,7 +258,7 @@ import {FcSearch} from "react-icons/fc"
   const handleETelivision = () => {
   
     dispatch(getDataRequest());
-     axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=${"Telivision"}`)
+     axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&search=${"Telivision"}`)
       .then((res) => {
         console.log(res.data);
         dispatch(getDataSuccess(res.data));
@@ -273,7 +273,7 @@ import {FcSearch} from "react-icons/fc"
   const handleEMonitor = () => {
   
     dispatch(getDataRequest());
-     axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=${"Monitor"}`)
+     axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&search=${"Monitor"}`)
       .then((res) => {
         console.log(res.data);
         dispatch(getDataSuccess(res.data));
@@ -287,7 +287,7 @@ import {FcSearch} from "react-icons/fc"
   const handleMobile = () => {
   
     dispatch(getDataRequest());
-     axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=${"Mobile"}`)
+     axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&search=${"Mobile"}`)
       .then((res) => {
         console.log(res.data);
         dispatch(getDataSuccess(res.data));
@@ -301,7 +301,7 @@ import {FcSearch} from "react-icons/fc"
   const handleLKitchen = () => {
   
     dispatch(getDataRequest());
-     axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=${"Kitchen"}`)
+     axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&search=${"Kitchen"}`)
       .then((res) => {
         console.log(res.data);
         dispatch(getDataSuccess(res.data));
@@ -316,7 +316,7 @@ import {FcSearch} from "react-icons/fc"
   const handleDailyuse = () => {
   
     dispatch(getDataRequest());
-     axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=${"Dailyuse"}`)
+     axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&search=${"Dailyuse"}`)
       .then((res) => {
         console.log(res.data);
         dispatch(getDataSuccess(res.data));
@@ -331,7 +331,7 @@ import {FcSearch} from "react-icons/fc"
   const handleWatch = () => {
   
     dispatch(getDataRequest());
-     axios.get(`https://tan-determined-dove.cyclic.app/products?page=${page}&limit=16&search=${"Watch"}`)
+     axios.get(`https://red-helpful-seagull.cyclic.app/products?page=${page}&limit=16&search=${"Watch"}`)
       .then((res) => {
         console.log(res.data);
         dispatch(getDataSuccess(res.data));
@@ -347,7 +347,7 @@ import {FcSearch} from "react-icons/fc"
   const handlePrice1 = () => {
   
     dispatch(getDataRequest());
-     axios.get(`https://tan-determined-dove.cyclic.app/products?filterby=price&lt=1999`)
+     axios.get(`https://red-helpful-seagull.cyclic.app/products?filterby=price&lt=1999`)
       .then((res) => {
         console.log(res.data);
         dispatch(getDataSuccess(res.data));
@@ -362,7 +362,7 @@ import {FcSearch} from "react-icons/fc"
   const handlePrice2 = () => {
   
     dispatch(getDataRequest());
-     axios.get(`https://tan-determined-dove.cyclic.app/products?filterby=price&lt=4999`)
+     axios.get(`https://red-helpful-seagull.cyclic.app/products?filterby=price&lt=4999`)
       .then((res) => {
         console.log(res.data);
         dispatch(getDataSuccess(res.data));
@@ -377,7 +377,7 @@ import {FcSearch} from "react-icons/fc"
   const handlePrice3 = () => {
   
     dispatch(getDataRequest());
-     axios.get(`https://tan-determined-dove.cyclic.app/products?filterby=price&lt=9999`)
+     axios.get(`https://red-helpful-seagull.cyclic.app/products?filterby=price&lt=9999`)
       .then((res) => {
         console.log(res.data);
         dispatch(getDataSuccess(res.data));
@@ -392,7 +392,7 @@ import {FcSearch} from "react-icons/fc"
   const handlePrice4 = () => {
   
     dispatch(getDataRequest());
-     axios.get(`https://tan-determined-dove.cyclic.app/products?filterby=price&lt=39999`)
+     axios.get(`https://red-helpful-seagull.cyclic.app/products?filterby=price&lt=39999`)
       .then((res) => {
         console.log(res.data);
         dispatch(getDataSuccess(res.data));
@@ -407,7 +407,7 @@ import {FcSearch} from "react-icons/fc"
   const handlePrice5 = () => {
   
     dispatch(getDataRequest());
-     axios.get(`https://tan-determined-dove.cyclic.app/products?filterby=price&lt=59999`)
+     axios.get(`https://red-helpful-seagull.cyclic.app/products?filterby=price&lt=59999`)
       .then((res) => {
         console.log(res.data);
         dispatch(getDataSuccess(res.data));
@@ -500,6 +500,7 @@ import {FcSearch} from "react-icons/fc"
                 Categories
               </Text>
               <Box textAlign="left" fontSize={["xs", "xs", "sm"]}>
+                
                 <Text className="section-left-hover-bold" onClick={handleEarphone}>Earphone</Text>
                 <Text className="section-left-hover-bold" onClick={handleSpeaker}>Speaker</Text>
                 <Text className="section-left-hover-bold" onClick={handleETelivision}>Telivision</Text>
