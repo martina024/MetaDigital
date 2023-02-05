@@ -14,7 +14,7 @@ const Footer = () => {
 
 
   return (
-    <Flex as="footer" gap={30} bg="gray.500" >
+    <Flex as="footer" gap={30} bg="gray.500" display={["none","none","flex"]}>
       <Box padding="5rem" margin={"auto"}> 
         <Stack spacing="1rem" direction="row" alignItems={"center"} fontSize="2xl">
           <Box>
