@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Flex,
   Box,
@@ -28,16 +28,31 @@ import {FaShoppingCart,FaHouseUser} from "react-icons/fa"
 import { RiAccountCircleFill} from "react-icons/ri"
 import {FcAbout} from  "react-icons/fc"
 import {BsMenuButtonWideFill} from "react-icons/bs"
-
+// import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import ProjectLogo from "../asset/projectlogo.png"
 import Menu from "./Menu";
+import axios from "axios";
 
 
 const Navbar = () => {
   const navigate=useNavigate()
+  const [Cart_Data, set_Cart_Data] = useState([]);
   
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const fetchData = async () => {
+    // console.log("data")
+    let res = await axios
+      .get(`https://red-helpful-seagull.cyclic.app/products/cart`)
+      .then((res) => {
+        set_Cart_Data(res.data);
+        console.log(res);
+      });
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <Box bg="black">
@@ -57,9 +72,11 @@ const Navbar = () => {
       >
         <VStack align="center" ml={["none","none","70px"]}>
           {/* <Image src={ProjectLogo} alt="logo" /> */}
+          <Link href="/">
           <Text p="0 10px" fontWeight="bold" fontSize="25px" ml={2} color="gray.400" fontFamily={"sans-serif"} border="1px solid #E2E8F0" borderStyle={"dotted"}>
             META Digital
           </Text>
+          </Link>
         </VStack>
 
         <Box display={{ base: "block", md: "none" }} onClick={onOpen}>
@@ -80,11 +97,11 @@ const Navbar = () => {
             <DrawerBody>
             <VStack>
             <Input placeholder="Search" border={"1px solid gray"}/>
-            <Link href="#"><FaHouseUser size = '28px' color="#4A5568"/></Link>
+            <Link href="/"><FaHouseUser size = '28px' color="#4A5568"/></Link>
             <Link href="#"><FcAbout size = '28px' color="#4A5568"/></Link>
             <Link href="#">Login</Link>
             <Link href="#">Sign up</Link>
-            <Link href="#"><FaShoppingCart size = '28px' color="#4A5568"/></Link>
+            <Link href="/cart"><FaShoppingCart size = '28px' color="#4A5568"/></Link>
             </VStack>
             
             </DrawerBody>
@@ -131,10 +148,12 @@ const Navbar = () => {
 
     <Box>
       <HStack>
-      <HStack   border="0px solid red">
-            <Link href="#"  border="0px solid red" w="20%" mr="10%"><FaHouseUser size = '29px' color="#E2E8F0" /></Link>
+      <Link to="/"  >
+        <HStack   border="0px solid red">
+            <FaHouseUser size = '29px' color="#E2E8F0" />
             <Text  fontFamily={"cursive"}  color="gray.400" >Home</Text>
             </HStack>
+            </Link>
           
             <HStack   border="0px solid red" >
             <Link href="#"  border="0px solid red" w="20%" mr="15%"><FcAbout size = '40px' color="#E2E8F0"/></Link>
@@ -181,12 +200,19 @@ const Navbar = () => {
         </PopoverContent>
       </Popover>
 
-            <Box style={{ position: 'relative' }}>
+    
+
+              <Link href="/cart"><Box style={{ position: 'relative' }}>
             <HStack   border="0px solid red">
-            <Link href="#"><FaShoppingCart size = '30px' color="#E2E8F0"/></Link>
+              <div style={{ position: "absolute",width: "20px",height: "20px",backgroundColor: "black", color: "white",
+              padding: "3px", textAlign:"center",borderRadius: "50%",left: "1px", fontSize:"12px"}}>
+                 {Cart_Data.length && Cart_Data.filter(item=>item.quantity > 0).length}
+              </div>
+            <FaShoppingCart size = '30px' color="#E2E8F0"/>
             <Text  fontFamily={"cursive"} w="5rem" color="gray.400">Cart</Text>
             </HStack>
             </Box>
+            </Link>
           
 
       </HStack>

@@ -5,7 +5,7 @@ import { Route, Routes } from 'react-router-dom'
 // import AdminLogin from './Admin/AdminLogin'
 // import AdminPrivateRoutes from './Admin/AdminPrivateRoute'
 // import AdminSignup from './Admin/AdminSignup'
-// import CartPage from './CartPage'
+import CartPage from './CartPage'
 import CheckoutPage from './CheckoutPage'
 
 import Homepage from './Homepage'
@@ -14,6 +14,8 @@ import Homepage from './Homepage'
 import PrivateRoute from './PrivateRoute'
 import ProductPage from './ProductPage'
 import SingleProductPage from './SingleProductPage'
+
+
 // import UserLogin from './User/UserLogin'
 // import UserSignup from './User/UserSignup'
 
@@ -25,7 +27,7 @@ const AllRoutes = () => {
             <Route path="/" element={<Homepage/>} />
             <Route path="/allproducts" element={<ProductPage/>} />
             <Route path="/product/:id" element={<SingleProductPage/>} />
-            {/* <Route path="/cart" element={<PrivateRoute><CartPage/></PrivateRoute>} /> */}
+            <Route path="/cart" element={<PrivateRoute><CartPage/></PrivateRoute>} />
             <Route path="/cart/checkout" element={<PrivateRoute><CheckoutPage/></PrivateRoute>} />
             {/* <Route path="/payment" element={<PrivateRoute><Payment/></PrivateRoute>} /> */}
             {/* <Route path="/login" element={<UserLogin/>} /> */}

@@ -11,7 +11,7 @@ import Footer from "../Component/Footer"
 
 
 const Homepage = () => {
-  const API = "https://tan-determined-dove.cyclic.app/products"
+  const API = "https://red-helpful-seagull.cyclic.app/products"
   
   const images=[
     "https://www.reliancedigital.in/medias/LG-Friday-Carausel-Banner-09-11-202-D.jpg?context=bWFzdGVyfGltYWdlc3w5OTcwM3xpbWFnZS9qcGVnfGltYWdlcy9oNzAvaDhkLzk5MTkxODcyMjI1NTguanBnfDZjYTc5ZjUwZDY3YzZiNjMwODgwOTMyMzBiZDE4OGVhZGEzMDAyNTUyNWNkYjAyYjljNzM2MTU0OTBiZDM1MjU",
