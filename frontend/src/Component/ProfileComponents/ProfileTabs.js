@@ -3,30 +3,30 @@ import React from 'react'
 const ProfileTabs = () => {
   return (
     <>
-      <form className='row form-container'>
-        <div className='col-md-6'>
-            <div className='form'>
+      <form >
+        <div >
+            <div >
                 <label for="account-fn">User Name</label>
-                <input className='form-control' type="text" required />
+                <input  type="text" required />
             </div>
         </div>
 
-        <div className='col-md-6'>
-            <div className='form'>
+        <div >
+            <div >
                 <label for="account-email">Email Address</label>
-                <input className='form-control' type="email" />
+                <input  type="email" />
             </div>
         </div>
-        <div className='col-md-6'>
-            <div className='form'>
+        <div >
+            <div >
                 <label for="account-pass">New Password</label>
-                <input className='form-control' type="password" />
+                <input  type="password" />
             </div>
         </div>
-        <div  className='col-md-6'>
-            <div className='form'>
+        <div >
+            <div >
                 <label for="account-confirm-pass">Confirm Password</label>
-                <input className='form-control' type="password"  />
+                <input  type="password"  />
             </div>
         </div>
         <button type='submit'>Update Profile</button>
