@@ -12,7 +12,7 @@ console.log(token, "private route")
 
 if(token == "" || token == undefined) {
     console.log(token, "private route11")
-    // return navigate("/login")
+    
    return <Navigate to="/login"/>
 }
 
