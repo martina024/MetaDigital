@@ -38,6 +38,8 @@ HOMEPAGE-:
 Here is the homepage which is entirely responsive and is made by using Chakra UI the products over here are listed through the api which is made by using node JS, express, mongoDB. 
 The data is fetched from the cloud database by mongoAtlas. 
 Each product open up to a single product page also using an api.
+
+
 ![WhatsApp Image 2023-02-28 at 00 45 58](https://user-images.githubusercontent.com/107464455/221666789-52bac642-3c65-4bdd-8f89-d0bac38af669.jpg)
 
 
@@ -48,6 +50,9 @@ All Products Page-:
 
 This page shows user all the products which are available in the database and user can sort them according to their price from low to high or vice versa. User can search for a specific item by using the search bar, the search funtionality is achieved using backend api.
 User can choose the product for a specific brand by clicking on the brand listed on the sidebar also. User can click on any product and he/she will be redirected on single product page.
+
+
+![WhatsApp Image 2023-02-28 at 00 46 23](https://user-images.githubusercontent.com/107464455/221667235-7032c182-a0b0-4084-bcc6-cca1e5650eaf.jpg)
 
 
 
@@ -70,11 +75,15 @@ SignUp Page-:
 
 Here user can signup if he/she is not already registered with us already, so that in future they can just login and proceed with their order of purchasing.
 
+![WhatsApp Image 2023-02-28 at 00 47 07](https://user-images.githubusercontent.com/107464455/221667303-196ba56f-b165-4658-ace5-56217abe02b6.jpg)
+
+
 Cart Page-:
 
 This is our cart page where user can increase or decrease the quantity of the product according to their needs and can proceed further to checkout page before payment.
 
 
+![WhatsApp Image 2023-02-28 at 00 46 48](https://user-images.githubusercontent.com/107464455/221667359-596452eb-671a-4e4b-b11f-0fbf1647110c.jpg)
 
 
 
